@@ -1,0 +1,34 @@
+.msec {
+    position: relative;
+
+    &__heading {
+        padding: 4rem 1rem 1rem 0;
+        width: 60vw;
+
+        h2 {
+            color: $darkBlue;
+            font-weight: 400;
+        }
+
+        p {
+            color: $grayishBlue;
+        }
+    }
+
+    &__flex {
+        padding: 3rem 8% 1rem 0;
+
+        .container {
+            display: flex;
+            gap: 10px;
+
+            h3 {
+                color: $darkBlue;
+                font-weight: 400;
+            }
+            p {
+                font-size: $font-med;
+            }
+        }
+    }
+}

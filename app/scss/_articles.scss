@@ -1,0 +1,89 @@
+.articles {
+
+    padding: 3rem 8% 1rem 0;
+
+    h2 {
+        color: $darkBlue;
+        font-size: 2rem;
+        font-weight: 300;
+        
+        padding-bottom: 1.5rem;
+    }
+
+    &__flex {
+        padding-bottom: 3rem;
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            position: relative;
+            // class .img
+            .img {
+                height: 12rem;
+                width: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+
+            // wrap
+            .wrap {
+                padding: 2em 10% 0.1em 6%;
+                height: 400px;
+                overflow: auto;
+                background-color: $white;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+            h3 {
+                color: $darkBlue;
+                font-weight: 400;
+                padding-top: 0.5em;
+                margin: 0;
+            }
+
+            h5 {
+                padding: 0;
+                margin: 0;
+                font-weight: 400;
+            }
+
+            p {
+                padding-bottom: 0.1em;
+                margin-bottom: 2rem;
+            }
+
+            #a1 {
+
+                .img {
+                    background-image: url('/images/image-currency.jpg');
+                }
+            }
+
+            #a2 {
+                
+                .img {
+                    background-image: url('/images/image-restaurant.jpg');
+                }
+            }
+
+            #a3 {
+
+                .img {
+                    background-image: url('/images/image-plane.jpg');
+                }
+            }
+
+            #a4 {
+
+                .img {
+                    background-image: url('/images/image-confetti.jpg');
+                }
+            }
+        }
+    }
+}

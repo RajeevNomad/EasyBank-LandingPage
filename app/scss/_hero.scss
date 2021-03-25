@@ -1,0 +1,67 @@
+.hero {
+
+    display: flex;
+    position: relative;
+    
+    
+
+    &__text {
+        flex: 1;
+        z-index: 1;
+
+        .container {
+            margin: 4.4rem 3rem;
+            margin-left: 0;
+            padding: 1.25rem 1.5rem;
+            color: $darkBlue;
+            text-align: left;
+            background-color: $white;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+        }
+
+        p {
+            color: $grayishBlue;
+        }
+
+        .button.cta {
+                font-size: $font-sm;
+                color: $white;
+                transition: opacity 200mx ease-in-out;
+        
+                &:hover {
+                    opacity: 0.75;
+                }
+        }
+    }
+
+    &__img {
+        flex: 2;
+        z-index: 1;
+        position: relative;
+        img {
+            position: absolute;
+            height: 50rem;
+            // transform: translate(0%, -25%);
+            right: -200px;
+            top: -200px;
+            z-index: 0;
+        }
+        &::after {
+            content: "";
+            // display: inline-block;
+            position: absolute;
+            background-image: url("/images/image-mockups.png");
+            background-repeat: no-repeat;
+            z-index: 2;
+            height: 939px;
+            width: 767px;
+            right: -130px;
+            top: -130px;
+        }
+    }
+
+}
