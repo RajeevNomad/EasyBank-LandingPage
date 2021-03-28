@@ -11,11 +11,14 @@
 
         .container {
             margin: 4.4rem 3rem;
-            margin-left: 0;
             padding: 1.25rem 1.5rem;
             color: $darkBlue;
             text-align: left;
             background-color: $white;
+
+            @include breakpoints-up(large) {
+                margin-left: 0;
+            }
         }
 
         h1 {
@@ -31,6 +34,8 @@
                 font-size: $font-sm;
                 color: $white;
                 transition: opacity 200mx ease-in-out;
+                margin: 1.5rem;
+                margin-left: 0;
         
                 &:hover {
                     opacity: 0.75;
@@ -41,26 +46,95 @@
     &__img {
         flex: 2;
         z-index: 1;
-        position: relative;
-        img {
-            position: absolute;
-            height: 50rem;
-            // transform: translate(0%, -25%);
-            right: -200px;
-            top: -200px;
-            z-index: 0;
+
+        .container {
+            position: relative;
+            
+            img {
+                position: absolute;
+                height: 50rem;
+                // transform: translate(0%, -25%);
+                right: -220px;
+                top: -200px;
+                z-index: 0;
+            }
+            &::after {
+                content: "";
+                // display: inline-block;
+                position: absolute;
+                background-image: url("/images/image-mockups.png");
+                background-repeat: no-repeat;
+                z-index: 2;
+                height: 939px;
+                width: 767px;
+                right: -130px;
+                top: -130px;
+            }
         }
-        &::after {
-            content: "";
-            // display: inline-block;
-            position: absolute;
-            background-image: url("/images/image-mockups.png");
-            background-repeat: no-repeat;
-            z-index: 2;
-            height: 939px;
-            width: 767px;
-            right: -130px;
-            top: -130px;
+    }
+
+
+    // tablet
+    @include breakpoints-down(medium) {
+        flex-direction: column-reverse;
+        
+        &__text {
+            .container {
+                text-align: center;
+                margin: 2rem 4%;
+            }
+            h1 {
+                margin-top: 0;
+            }
+            .button.cta {
+                margin: 1rem;
+            }
+        }
+
+
+        &__img {
+            flex: 1;
+            
+            .empty {
+                display: block;
+                height: 27rem;
+
+                @include breakpoints-down(small) {
+                    height: 18rem;
+                }
+            }
+
+            .container {
+                
+                img {
+                    font-size: 0.9rem;
+                    height: 50em !important;
+                    top: -350px !important;
+                    right: 0 !important;
+                    left: 50%;
+                    transform: translateX(-50%);
+
+                    @include breakpoints-down(small) {
+                        font-size: 0.7rem;
+                        top: -280px !important;
+                    }
+                }
+                &::after {
+                    font-size: 0.9rem;
+                    height: 50em !important;
+                    width: 40.9375em !important;
+                    top: -245px !important;
+                    right: 0 !important;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-size: contain;
+
+                    @include breakpoints-down(small) {
+                        font-size: 0.55rem;
+                        top: -150px !important;
+                    }
+                }
+            }
         }
     }
 

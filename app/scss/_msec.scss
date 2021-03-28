@@ -13,13 +13,21 @@
         p {
             color: $grayishBlue;
         }
+
+        @include breakpoints-down(medium) {
+            // margin: auto;
+            width: auto;
+            text-align: center;
+            padding: 2rem 2rem 1rem 2rem;
+        }
     }
 
     &__flex {
         padding: 3rem 8% 1rem 0;
 
         .container {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
             gap: 10px;
 
             h3 {
@@ -28,6 +36,23 @@
             }
             p {
                 font-size: $font-med;
+            }
+        }
+
+        @include breakpoints-down(medium) {
+            padding: 1rem 8%;
+            
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                text-align: center;
+            }
+        }
+
+        @include breakpoints-down(small) {
+
+            .container {
+                grid-template-columns: 1fr;
             }
         }
     }

@@ -35,15 +35,28 @@
 
       <div class="header__links hide-for-mobile">
         <a href="#">Home</a>
+        <a href="#">About</a>
         <a href="#">Contact</a>
         <a href="#">Blog</a>
         <a href="#">Careers</a>
-        <a href="#"></a>
       </div>
 
       <a href="#" class="button header__cta hide-for-mobile">Request Invite</a>
     </nav>
   </header>
+
+  <!-- Mobile menu -->
+
+  <div id="mobilemenu" class="hide-for-desktop">
+    <div class="container">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Blog</a>
+      <a href="#">Careers</a>
+    </div>
+  </div>
+  
   <!-- Section 1 -->
   <div class="section s1">
     <div class="hero">
@@ -56,7 +69,10 @@
         </div>
       </div>
       <div class="hero__img">
-        <img src="/images/bg-intro-desktop.svg" alt="background intro">
+        <div class="container">
+          <img src="/images/bg-intro-desktop.svg" alt="background intro">
+        </div>
+        <div class="empty"></div>
       </div>
     </div>
   </div>

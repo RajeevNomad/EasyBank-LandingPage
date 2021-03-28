@@ -2,6 +2,20 @@
 
     padding: 3rem 8% 1rem 0;
 
+    @include breakpoints-down(medium) {
+        padding: 1rem 3rem 1rem 3rem;
+
+        h2 {
+            text-align: center;
+            margin: 1rem;
+            padding-bottom: 0.5rem !important;
+        }
+    }
+
+    @include breakpoints-down(small) {
+        padding: 1rem 8%;
+    }
+
     h2 {
         color: $darkBlue;
         font-size: 2rem;
@@ -31,30 +45,45 @@
 
             // wrap
             .wrap {
-                padding: 2em 10% 0.1em 6%;
-                height: 400px;
+                // padding: 2em 10% 0.1em 6%;
+                padding: 0;
+                margin: auto;
+                height: 310px;
+                font-size: 1rem;
+                align-items: center;
+                justify-content: center;
                 overflow: auto;
                 background-color: $white;
                 border-bottom-left-radius: 5px;
                 border-bottom-right-radius: 5px;
             }
 
+            .author {
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 0;
+                width: 85%;
+            }
+
             h3 {
                 color: $darkBlue;
                 font-weight: 400;
-                padding-top: 0.5em;
-                margin: 0;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 0.7rem;
+                width: 85%;
             }
 
             h5 {
                 padding: 0;
-                margin: 0;
                 font-weight: 400;
             }
 
             p {
                 padding-bottom: 0.1em;
-                margin-bottom: 2rem;
+                margin-left: auto;
+                margin-right: auto;
+                width: 85%;
             }
 
             #a1 {
@@ -82,6 +111,24 @@
 
                 .img {
                     background-image: url('/images/image-confetti.jpg');
+                }
+            }
+
+            @include breakpoints-down(medium) {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+
+                .wrap {
+                    height: 260px;
+                    
+                }
+            }
+
+            @include breakpoints-down(small) {
+                grid-template-columns: 1fr;
+
+                .wrap {
+                    height: max-content;
                 }
             }
         }

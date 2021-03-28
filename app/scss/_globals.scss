@@ -109,6 +109,34 @@ a, a:visited, a:hover {
         height: 10rem;
         background-color: $darkBlue;
     }
+
+    @include breakpoints-down(medium) {
+        padding-left: 0;
+
+        &.s1 {
+            height: auto;
+        }
+
+        &.s2 {
+            height: auto;
+        }
+
+        &.s3 {
+            height: auto;
+        }
+
+        &.s4 {
+            padding-left: 8%;
+            height: 15rem;
+        }
+    }
+
+    @include breakpoints-down(small) {
+
+        &.s4 {
+            height: 24rem;
+        }
+    }
 }
 
 // Visibility
@@ -122,6 +150,6 @@ a, a:visited, a:hover {
 .hide-for-desktop {
     // Hide for desktop viewport width
     @include breakpoints-up(large) {
-        display: none;
+        display: none !important;
     }
 }
