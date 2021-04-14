@@ -74,6 +74,11 @@
                 width: 85%;
             }
 
+            h3:hover {
+                color: $limeGreen;
+                cursor: zoom-in;
+            }
+
             h5 {
                 padding: 0;
                 font-weight: 400;
@@ -89,28 +94,28 @@
             #a1 {
 
                 .img {
-                    background-image: url('/images/image-currency.jpg');
+                    background-image: url('../../images/image-currency.jpg');
                 }
             }
 
             #a2 {
                 
                 .img {
-                    background-image: url('/images/image-restaurant.jpg');
+                    background-image: url('../../images/image-restaurant.jpg');
                 }
             }
 
             #a3 {
 
                 .img {
-                    background-image: url('/images/image-plane.jpg');
+                    background-image: url('../../images/image-plane.jpg');
                 }
             }
 
             #a4 {
 
                 .img {
-                    background-image: url('/images/image-confetti.jpg');
+                    background-image: url('../../images/image-confetti.jpg');
                 }
             }
 

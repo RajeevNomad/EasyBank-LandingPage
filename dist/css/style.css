@@ -380,7 +380,7 @@ a, a:visited, a:hover {
 .hero__img .container::after {
   content: "";
   position: absolute;
-  background-image: url("/images/image-mockups.png");
+  background-image: url("../../images/image-mockups.png");
   background-repeat: no-repeat;
   z-index: 2;
   height: 939px;
@@ -613,6 +613,12 @@ a, a:visited, a:hover {
   width: 85%;
 }
 
+.articles__flex .container h3:hover {
+  color: #31d35c;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
 .articles__flex .container h5 {
   padding: 0;
   font-weight: 400;
@@ -626,19 +632,19 @@ a, a:visited, a:hover {
 }
 
 .articles__flex .container #a1 .img {
-  background-image: url("/images/image-currency.jpg");
+  background-image: url("../../images/image-currency.jpg");
 }
 
 .articles__flex .container #a2 .img {
-  background-image: url("/images/image-restaurant.jpg");
+  background-image: url("../../images/image-restaurant.jpg");
 }
 
 .articles__flex .container #a3 .img {
-  background-image: url("/images/image-plane.jpg");
+  background-image: url("../../images/image-plane.jpg");
 }
 
 .articles__flex .container #a4 .img {
-  background-image: url("/images/image-confetti.jpg");
+  background-image: url("../../images/image-confetti.jpg");
 }
 
 @media (max-width: 63.9375em) {
